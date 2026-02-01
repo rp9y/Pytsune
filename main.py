@@ -2,7 +2,7 @@ from colorama import Fore
 
 banner = f"""{Fore.BLUE}
 -------------------------------------------------------------------------------------------------------------
-                        Generic Python Stealer made for EDUCATIONAL PURPOSES ONLY
+                            Python Stealer made for EDUCATIONAL PURPOSES ONLY
                                        Discord Contact: @y452
                                              © Faith452
 -------------------------------------------------------------------------------------------------------------
