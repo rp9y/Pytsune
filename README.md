@@ -1,7 +1,7 @@
-# Phantom
+# Pytsune
 Advanced stealer written in python, exfiltrating data to a discord webhook, and then deleting itself.
 
---------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
 
 WARNING: This repository contains malware code for educational and research purposes only.
 Do NOT use this code for any unauthorized or illegal activities.
